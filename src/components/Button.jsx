@@ -82,9 +82,9 @@ function Button({ title = "See Live", className = "", onClick, href, target, rel
         rel={rel ?? (href.startsWith("http") ? "noreferrer noopener" : undefined)}
         {...commonProps}
       >
-        <motion.span variants={child} className="custom-button-text">
+        <span className="custom-button-text">
           {title}
-        </motion.span>
+        </span>
         {heartIcon}
       </motion.a>
     );
@@ -92,9 +92,9 @@ function Button({ title = "See Live", className = "", onClick, href, target, rel
 
   return (
     <motion.button type="button" onClick={onClick} {...commonProps}>
-      <motion.span variants={child} className="custom-button-text">
+      <span className="custom-button-text">
         {title}
-      </motion.span>
+      </span>
       {heartIcon}
     </motion.button>
   );
