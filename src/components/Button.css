@@ -1,0 +1,59 @@
+.custom-button {
+  min-width: 140px;
+  padding: 10px 20px;
+  background-color: #f4f4f5;
+  color: #000;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.custom-button:focus {
+  outline: none;
+}
+
+.custom-button:focus-visible {
+  box-shadow: 0 0 0 2px rgba(113, 113, 122, 0.6);
+}
+
+.custom-button-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.custom-button-icon {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+.heart-svg {
+  overflow: visible;
+}
+
+.heart-fill-rect {
+  transition: y 0.6s ease;
+}
+
+.custom-button:hover .heart-fill-rect,
+.custom-button:active .heart-fill-rect,
+.custom-button:focus .heart-fill-rect {
+  y: 0;
+  animation: wave-fill 0.8s ease forwards;
+}
+
+@keyframes wave-fill {
+  0% {
+    y: 24;
+  }
+  100% {
+    y: 0;
+  }
+}
